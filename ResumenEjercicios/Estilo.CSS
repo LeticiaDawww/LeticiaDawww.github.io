@@ -1,0 +1,245 @@
+@charset "utf-8";
+/* CSS Document */
+
+#tabs-2 {background-color: #E6E6FA;}
+
+#tabs-1 {background-color:  #E6E6FA;}
+
+#Tabs1 {background-color:  #E6E6FA;}
+
+#Tabs1 ul li{
+    background-color: #E6E6FA;
+    color: #000000;
+}
+
+#Tabs1 ul{background-color:  #E6E6FA;}
+
+footer .tiempo{
+	padding-bottom: 20px;
+	
+}
+
+body{
+	background-color: #E6E6FA;
+	margin: 0;
+}
+
+
+
+#contenedor{
+	display: flex;
+    justify-content: space-between;
+	
+	 	
+}
+
+#contenedor2{
+	display: flex;
+    justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding: 20px;
+	
+}
+
+
+@media (max-width: 720px) {
+    #contenedor2 {
+        flex-direction: column; /* Cambiar a columna en pantallas más pequeñas */
+        align-items: center; /* Centrar los elementos */
+    }
+	.tabs{
+		margin-top: 200px;
+	}
+	header .contenedor {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        align-items: center; /* Centra los elementos */
+		background-color: azure;
+		
+    }
+
+    header nav {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        align-items: center; /* Centra los elementos */
+        width: 100%; /* Asegura que el nav ocupe todo el ancho del header */
+    }
+
+    header nav a {
+        display: block; /* Asegura que cada enlace ocupe una línea completa */
+        width: 100%; /* Asegura que cada enlace ocupe todo el ancho del nav */
+        text-align: center; /* Centra el texto de cada enlace */
+        padding: 10px 0; /* Añade padding para espacio entre los enlaces */
+		padding-bottom: 0px;
+    }
+	header .logo{
+		 display: block; /* Asegura que cada enlace ocupe una línea completa */
+        width: 100%; /* Asegura que cada enlace ocupe todo el ancho del nav */
+        text-align: center; /* Centra el texto de cada enlace */
+        padding: 10px 0; /* Añade padding para espacio entre los enlaces */
+		padding-bottom: 0px;
+	}
+	 header {
+		 height: auto;
+        margin-bottom: 20px;
+    }
+ 
+}
+
+.titulo{
+	text-decoration: underline;
+	text-align: left;
+}
+
+.def{
+	text-align: left;
+}
+
+.logoinsta{padding-left: 8pt;
+	
+}
+footer{
+	background-color: rgb(230,230,230);
+}
+
+footer p{
+	margin: 0;
+	padding: 12px;
+}
+
+footer .contenedor{
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header{
+	background-color: azure;
+	position: fixed;
+	width: 100%;
+	z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+	top: 0;
+	height: 80px;
+	
+}
+
+header .logo{
+	margin: 0;
+	padding: 25px 30px; /*el primer valor es paddin de arriba y abajo, y el segunndo padding a los lados*/
+	font-weight: bold;
+	color: black;
+	font-family: "Candara";
+	
+}
+
+header .contenedor{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	 flex-wrap: wrap; /* Permite que los enlaces se ajusten a una nueva línea si es necesario */
+    padding: 0 20px; /* Añadir padding horizontal */
+    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño del contenedor */
+	
+}
+
+header nav{
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	padding-bottom: 25px;
+	 flex-wrap: wrap;
+	gap: 10px;
+	
+}
+
+header a{
+	padding: 5px 12px;
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+	font-family: "Candara";
+	
+
+}
+
+header a:hover{
+	color: blue;
+}
+
+
+@media (min-width: 720px){ /*cuando el ancho de la pantalla supere los 720px se aplicarán estos estilos ->*/
+	header{
+		position: fixed;
+		width: 100%;
+		
+		
+	}
+	
+	header .contenedor{
+		flex-direction: row;
+		justify-content: space-between; /*para que los elementos se vayan uno a una esquina y el otro a la otra*/
+}
+
+	header nav{
+		flex-direction: row;
+		padding-bottom: 0;
+		padding-right: 20px;
+	}
+	
+	
+}
+
+.tabs {
+    padding: 10px;
+    color: #E6E6FA;
+	padding-top: calc(var(--tabs-height) + 80px);
+}
+
+.tab-container {
+    position: relative;
+    padding-top:calc(var(--tabs-height) + 20px); 
+	margin-top: 80px;
+	
+	
+}
+
+.tab-content {
+    background-color: #E6E6FA;
+    padding: 20px;
+    border: var(--tabs-border-size) solid var(--tabs-border-color);
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    z-index: 100;
+    height: 1500px;
+}
+
+.tab > a {
+    text-align: center;
+    position: absolute;
+    width: calc(var(--tabs-width));
+    height: calc(var(--tabs-height) + var(--tabs-border-size));
+    top: 0px;
+    left: calc(var(--tabs-width) * var(--tabs-position)); /* posición de cada pestaña */
+    background-color: var(--tabs-dark-color);
+    padding: 10px;
+    border: #E6E6FA;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 0;
+	z-index: 200; /* Asegura que las pestañas estén por encima del contenido */
+}
+
+.tab:target > a, .tab:last-of-type > a {
+    background-color: #E6E6FA;
+    z-index: 200;
+}
+
+.tab:target ~ .tab:last-of-type > a {
+    background-color: #E6E6FA;
+    z-index: 0;
+}
+
+footer .text{
+	font-family: "Candara";
+}
+

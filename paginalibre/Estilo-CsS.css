@@ -1,0 +1,298 @@
+@charset "utf-8";
+/* CSS Document */
+header{
+   background-color: azure;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+}
+
+header .logo{
+	margin: 0;
+	padding: 25px 30px; /*el primer valor es paddin de arriba y abajo, y el segunndo padding a los lados*/
+	font-weight: bold;
+	color: black;
+	font-family: "Candara";
+}
+
+header .contenedor{
+	display: flex;
+	flex-direction: column; /*los elementos se ordenan en columna*/
+	align-items: center;
+	
+	
+}
+
+header nav{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding-bottom: 25px;
+}
+
+header a{
+	padding: 5px 12px;
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+	font-family: "Candara";
+}
+
+header a:hover{
+	color: blue;
+}
+
+footer{
+	background-color: rgb(230,230,230);
+}
+
+footer .tiempo{
+	padding-bottom: 20px;
+	
+}
+
+footer p{
+	margin: 0;
+	padding: 12px;
+}
+
+footer .contenedor{
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logoinsta{padding-left: 8pt;
+	
+}
+
+@media (min-width: 720px){ /*cuando el ancho de la pantalla supere los 720px se aplicarán estos estilos ->*/
+	header{
+		position: fixed;
+		width: 100%;
+		
+	}
+	
+	header .contenedor{
+		flex-direction: row;
+		justify-content: space-between; /*para que los elementos se vayan uno a una esquina y el otro a la otra*/
+}
+
+	header nav{
+		flex-direction: row;
+		padding-bottom: 0;
+		padding-right: 20px;
+	}
+	
+}
+footer .logoinsta{
+	padding-left: 10px;
+}
+
+table{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-top: 200px;
+}
+
+body{
+	background-image:url("imagenes/fondo22.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	margin: 0;
+}
+	
+	
+table img {
+    width: 100%;
+    height: 100%;
+	object-fit: cover;
+	display: block;
+
+}
+
+table td{
+	text-align: left;
+	padding-left: 20px;
+}
+
+table .foto{
+	padding: 0;
+}
+
+table .titulo{
+	font-weight: bold;
+	font-family: "Candara";
+	
+}
+
+table .enlac{
+	color: black;
+}
+
+table .enlac:hover{
+	color: blue;
+}
+
+button{
+	font-size: 10px;
+	font-weight: bold;
+	padding: 10px 20px;
+	border-radius: 10px; /*bordes circulares*/
+	border: 1px solid rgba(0,0,0,0,5);
+	box-shadow: 2px 2px 10px rgba(0,0,0,0,5);
+	color: white;
+	background-color: dodgerblue;
+	
+}
+
+button:hover{
+	background-color: #0B167C; /*hover para color al pasar el cursor por encima*/
+}
+
+footer .text{
+	font-family: "Candara";
+}
+
+.boton-contenedor{
+	text-align: right;
+	margin-top: 10px;
+	padding-right: 70px;
+	padding-bottom: 40px;
+	margin-right: 200px;
+	
+}
+
+.boton-contenedor button{
+	margin: 0 5px;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+
+.contenedor{
+	padding-bottom: 10px;
+}
+
+.bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+	border-bottom-color: white;
+	border-bottom-style: ridge;
+	
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn26 {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+table {
+   border-collapse: separate;
+   border-spacing: 5px;
+   background: #000;
+   color: #fff;
+}
+td, th {
+   background: #fff;
+   color: #000;
+}
+
+@media (max-width: 30em) {
+	table{
+		width: 50%;
+		margin-top: 300px;
+		
+	}
+	
+	table tr{
+		display: flex;
+		flex-direction: column;
+		
+	
+	}
+	
+	table td{
+		width: auto;
+		padding-right: 20px;
+	}
+	
+	
+	
+	table .foto{
+		display: none;
+	}
+	
+	
+}
+	
+	
+@media (max-width: 1120px) {
+	table{
+		width: 50%;
+		margin-top: 300px;
+		
+	}
+	
+	table tr{
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1px;
+	
+	}
+	
+	table td{
+		width: auto; 
+		padding-right: 20px;
+	}
+	
+	table .foto{
+		display: none;
+	}
+	
+	.boton-contenedor{
+		padding-left: 150px;
+		
+	}
+	
+}
+	
+
+

@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+footer .text{
+	font-family: "Candara";
+}
+
+footer .tiempo{
+	padding-bottom: 20px;
+	
+}
+
+
+.FormularioRegistro {
+	width: 400px;
+	background: #33ccee;
+	padding: 30px;
+	margin: auto;
+	margin-top: 100px;
+	border-radius: 4px;
+	font-family: 'calibri';
+	color: white;
+	box-shadow: 7px 13px 37px #000;
+	margin-top: 300px;
+}
+
+
+
+
+.FormularioRegistro h4{
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+
+.control {
+	width: 100%;
+	background: #b5ebf7;
+	padding: 10px;
+	border-radius: 4px;
+	margin-bottom: 16px;
+	border: 1;
+    font-family: 'calibri';
+	font-size: 18px;
+}
+
+.FormularioRegistro p{
+	height: 40px;
+	text-align: center;
+	font-size: 18px;
+	line-height: 40px;
+	
+}
+
+.FormularioRegistro a {
+	color:#324DD2;
+	text-decoration: underline;
+}
+
+.FormularioRegistro .boton{
+	width: 100%;
+	background: #1f53c5;
+	border: none;
+	padding: 12px;
+	color: white;
+	margin: 16px 0;
+	font-size: 16px;
+}
+.FormularioRegistro .texto1{
+	width: 100%;
+}
+
+.FormularioRegistro .botonenviar{
+	background: #1f53c5;
+	border: none;
+	color: white;
+	padding: 8px;
+	margin: 16px 0;
+}
+
+.FormularioRegistro h1{
+	text-align: center;
+}
+
+
+footer{
+	background-color: rgb(230,230,230);
+	margin-top: 100px;
+}
+
+footer p{
+	margin: 0;
+	padding: 12px;
+}
+
+footer .contenedor{
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.logoinsta{padding-left: 8pt;
+	
+}
+
+
+header{
+   background-color: azure;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+}
+
+header .logo{
+	margin: 0;
+	padding: 25px 30px; /*el primer valor es paddin de arriba y abajo, y el segunndo padding a los lados*/
+	font-weight: bold;
+	color: black;
+	font-family: "Candara";
+
+}
+
+header .contenedor{
+	display: flex;
+	flex-direction: column; /*los elementos se ordenan en columna*/
+	align-items: center;
+	
+}
+
+header nav{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding-bottom: 25px;
+}
+
+header a{
+	padding: 5px 12px;
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+	font-family: "Candara";
+
+}
+
+header a:hover{
+	color: blue;
+}
+
+
+body{
+	background-image: url("imagenes/ML.jpg");
+	background-repeat: no-repeat;
+	background-size: cover; /*para que la imagen ocupe todo el espacio disponible*/
+	background-position: center center; /*para que la imagen aparezca siempre centrada*/
+}
+
+@media (min-width: 720px){ /*cuando el ancho de la pantalla supere los 720px se aplicarán estos estilos ->*/
+	header{
+		
+		width: 100%;
+		
+	}
+	
+	header .contenedor{
+		flex-direction: row;
+		justify-content: space-between; /*para que los elementos se vayan uno a una esquina y el otro a la otra*/
+}
+
+	header nav{
+		flex-direction: row;
+		padding-bottom: 0;
+		padding-right: 20px;
+	}
+	
+}
